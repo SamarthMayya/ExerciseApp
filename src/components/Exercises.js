@@ -38,6 +38,10 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     fetchExercises();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [bodyPart])
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [exercises])
   
   return (
     <Box
